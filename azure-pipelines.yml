@@ -1,4 +1,10 @@
 # Python package
+- task: DockerCompose@0
+  inputs:
+    containerregistrytype: 'Azure Container Registry'
+    azureContainerRegistry: '{"loginServer":"mycontregistry2404.azurecr.io", "id" : "/subscriptions/ee22c8f0-93df-4b47-925a-d337fef522fe/resourceGroups/Rohan_RG/providers/Microsoft.ContainerRegistry/registries/myContRegistry2404"}'
+    dockerComposeFile: '**/docker-compose.yml'
+    action: 'Run a Docker Compose command'
 # Create and test a Python package on multiple Python versions.
 # Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
